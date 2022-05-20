@@ -1,12 +1,22 @@
-fetch('https://randomlovecraft.com/api/sentences?limit=1')
-  .then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    console.log(data);
+async function loadQuote() {
+  const response = await fetch('https://randomlovecraft.com/api/sentences?limit=1');
+  const data = await response.json();
+
+  return data;
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  let data = [];
+
+  try {
+    data = await loadQuote();
     displayData(data);
-  }).catch(function (error) {
-    console.log(error);
-  });
+  }
+  catch (err) {
+    console.log("Error!");
+    console.log(err);
+  }
+});
 
 let displayData = (data) => {
 
@@ -21,4 +31,4 @@ let displayData = (data) => {
   titleHeading.innerHTML = title;
   yearHeading.innerHTML = year;
   sentenceParagraph.innerHTML = sentence;
-}
+};
