@@ -30,5 +30,5 @@ let displayData = (data) => {
 
   titleHeading.innerHTML = title;
   yearHeading.innerHTML = year;
-  sentenceParagraph.innerHTML = sentence;
+  sentenceParagraph.innerHTML = "\"" + sentence + "\"";
 };

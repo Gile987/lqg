@@ -1,3 +1,16 @@
+/* variables */
+
+:root {
+  --clr-primary: #170b3b;
+  --clr-secondary: #341948;
+  --clr-text: #9388a2;
+  --clr-black: #0e050f;
+  --ff-primary: "Amatic SC";
+  --spacing: 0.25rem;
+  --fixed-width: 800px;
+}
+
+
 /* override/reset default styling */
 
 *,
@@ -6,4 +19,66 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+/* global styles */ 
+
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-black);
+  background-image: url("../img/seal.png");
+  background-size: auto;
+  color: var(--clr-text);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-top: 1.2rem;
+  color: var(--clr-text);
+}
+
+/* page title */
+
+.page-title {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+
+/* card */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 1.5rem auto;
+  background: var(--clr-primary);
+}
+
+.title {
+  text-align: center;
+  border-bottom: 0.5px dotted var(--clr-text);
+}
+
+.year {
+  text-align: end;
+  margin: 0.5rem;
+}
+
+.quote-container {
+  margin: 1rem;
 }
