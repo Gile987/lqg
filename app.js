@@ -32,3 +32,18 @@ let displayData = (data) => {
   yearHeading.innerHTML = year;
   sentenceParagraph.innerHTML = "\"" + sentence + "\"";
 };
+
+const button = document.querySelector(".btn");
+
+button.addEventListener("click", async () => {
+  let data = [];
+
+  try {
+    data = await loadQuote();
+    displayData(data);
+  }
+  catch (err) {
+    console.log("Error!");
+    console.log(err);
+  }
+});
